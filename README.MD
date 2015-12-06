@@ -1,7 +1,16 @@
-#{{Project Name}}#
-Project description here
+#Contro: Basic Drawer#
+Basic `drawer` (collapsable) divs. Tired of the bloated solutions out there. Created this basic JS control which uses some help from JQUERY.
 
-##Installation##
+
+###How to Use###
+```javascript
+drawer.settings.handleClass	=	'.drawer-handle';
+drawer.settings.drawerClass	=	'.drawer-inside';
+drawer.settings.openClass	=	'open-drawer';
+drawer.settings.openState	=	'reviews-drawer';
+```
+
+##Development Installation##
 * npm install
 * bower install
 

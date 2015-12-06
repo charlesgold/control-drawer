@@ -1,0 +1,56 @@
+/***
+*
+*
+drawer.settings.handleClass	=	'.drawer-handle';
+drawer.settings.drawerClass	=	'.drawer-inside';
+drawer.settings.openClass	=	'.open-drawer';
+*/
+
+#cstDrawer {
+	height:auto;
+
+	.drawer-handle {
+		padding: 5px;
+		background: #878A69;
+		color: #FFFFFF;
+		font-size:1.1em;
+
+		border-bottom:1px solid #FFF;
+		h3 {
+			cursor: pointer;
+		}
+	}
+
+
+
+	.drawer-inside{
+		padding:10px 5px;
+		background: #878A69;
+		font-size:.9em;
+		color:#666;
+
+		//Transitions		
+		opacity: 0;
+		height: 0;
+		display: none;
+		transform: translateY(-20px);
+		-ms-transform: translateY(-20px);
+		-webkit-transform: translateY(-20px);
+
+		&.open-drawer {
+			border-bottom: 1px solid #666;
+			background: #FFF;
+			opacity: 1;
+			height: auto;
+			display: block;
+			min-height: 100px;
+			overflow-y: scroll;
+			transform: translateY(0px);
+			-ms-transform: translateY(0px);
+			-webkit-transform: translateY(0px);
+			transition: transform .4s ease-in-out, opacity .4s ease-in-out;			
+		}		
+
+	}
+
+}

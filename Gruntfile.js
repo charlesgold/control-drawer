@@ -40,11 +40,11 @@ module.exports = function(grunt) {
 	        ,replacements: [
 		        {
 					from: '{{ appjs }}'
-					,to: '<%= cfg.distCss %>'
+					,to: '<%= cfg.distJs %>'
 		        }
 		        ,{
 		        	from: '{{ appcss }}'
-		        	,to: '<%= cfg.distJs %>'
+		        	,to: '<%= cfg.distCss %>'
 		        }
 	        ]
 	      }
@@ -77,6 +77,7 @@ module.exports = function(grunt) {
 	      }
 	      ,dev: {
 	          src: [
+	          	'vendor/jquery/dist/jquery.js',
 	            '<%= cfg.appBase %>/js/*.js'
 	          ]
 	          ,dest: '<%= cfg.appBase %>/<%= cfg.appJs %>'
