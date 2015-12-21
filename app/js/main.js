@@ -1,5 +1,5 @@
 var drawer = {
-	version: '1.0.0'
+	version: '1.0.1'
 	,appInit: function(){
 		this.runApp();
 	}
@@ -7,7 +7,12 @@ var drawer = {
 		var _this = this;
 		//open one?
 		if(this.settings.openState!=0){
-			this.drawerAction(this.settings.openState);
+			var ele = this.settings.openState;
+			var _this = this;
+			ele.forEach(function(element){
+				_this.drawerAction(element);
+			});
+			
 		}
 		$(document).ready(function(){
 			$(_this.settings.handleClass).on('click', function(){
@@ -18,13 +23,13 @@ var drawer = {
 	}
 	,handleOpen: function(that){
 		var assDrawer = that.attr('data-drawer');		
-		console.log(assDrawer);
+		//console.log(assDrawer);
 		this.drawerAction(assDrawer);
 	}
 	,drawerAction: function(drawerId){
 		var _this = this;
 		$('#'+drawerId).toggleClass(_this.settings.openClass);
-		console.log(drawerId+ ' toggle class '+_this.settings.openClass);
+		//console.log(drawerId+ ' toggle class '+_this.settings.openClass);
 	}
 };
 
@@ -32,5 +37,5 @@ drawer.settings				= {};
 drawer.settings.handleClass	=	'.drawer-handle';
 drawer.settings.drawerClass	=	'.drawer-inside';
 drawer.settings.openClass	=	'open-drawer';
-drawer.settings.openState	=	'reviews-drawer';
+drawer.settings.openState	=	['reviews-drawer','specs-drawer'];
 drawer.appInit();

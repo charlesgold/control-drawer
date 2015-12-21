@@ -7,7 +7,12 @@ Basic `drawer` (collapsable) divs. Tired of the bloated solutions out there. Cre
 drawer.settings.handleClass	=	'.drawer-handle';
 drawer.settings.drawerClass	=	'.drawer-inside';
 drawer.settings.openClass	=	'open-drawer';
-drawer.settings.openState	=	'reviews-drawer';
+---
+drawer.settings.openState	=	0;
+or
+//specific an array for selectors to open 1..many.
+drawer.settings.openStat 	= ['spec-drawer','reviews-drawer']; 
+
 ```
 
 ##Development Installation##

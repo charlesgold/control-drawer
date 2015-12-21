@@ -1,6 +1,6 @@
 {
   "name": "basic-drawer-control",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Basic Drawer/Collapsable control (Basic)",
   "main": "app.htm",
   "scripts": {
